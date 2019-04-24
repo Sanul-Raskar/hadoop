@@ -1,0 +1,32 @@
+Plot graphs
+
+#Pie Chart
+>mydata = airquality[c(1:4),c(1,6)]
+> pie(mydata$Ozone,mydata$Month)
+> mydata
+
+
+#Bar charts:
+>mydata = airquality[c(1:4),c(1,6)]
+> mydata
+  Ozone Day
+1    41   1
+2    36   2
+3    12   3
+4    18   4
+> barplot(mydata$Ozone,mydata$Day,xlab = "Day",ylab = "Ozone",names.arg = mydata$Day)
+
+#BoxPlot
+>boxplot(Temp~Month,data=airquality,main="Different boxplots for each month",xlab="Month Number",ylab="Degree Fahrenheit",col="orange",border="brown")
+
+#Histogram
+hist(airquality$Temp,main="Temperature Histogram",col = "yellow")
+
+#Line Graphs
+>mydata = airquality[c(1:4),c(1,6)]
+> plot(mydata$Day,mydata$Ozone,col="red",type = "o",xlab = "Day",ylab = "Ozone",main = "Ozone vs Day")
+
+#Scatter Matrices
+> pairs(airquality$Ozone~airquality$Month)
+
+

@@ -1,0 +1,6 @@
+To understand Big data primitives and fundamentals.
+To understand the different Big data processing techniques.
+To understand and apply the Analytical concept of Big data using R/Python.
+To understand different data visualization techniques for Big Data.
+To understand the application and impact of Big Data
+To understand emerging trends in Big data analytics

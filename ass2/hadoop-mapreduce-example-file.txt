@@ -1,0 +1,19 @@
+export CLASSPATH="$HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-client-core-2.9.0.jar:$HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-client-common-2.9.0.jar:$HADOOP_HOME/share/hadoop/common/hadoop-common-2.9.0.jar:~/log/SalesCountry/*:$HADOOP_HOME/lib/*"
+
+
+
+sudo gedit Manifest.txt
+
+
+//add following lines to it
+Main-Class: SalesCountry.SalesCountryDriver
+
+javac -d . SalesMapper.java SalesCountryReducer.java SalesCountryDriver.java 
+
+jar -cfm analyselog.jar class.txt SalesCountry/*.class
+
+start-all.sh
+hdfs dfs -mkdir /logs
+hdfs dfs -put /home/sanul/Desktop/rPractice/log/access_log.csv /logs
+hadoop jar /home/sanul/Desktop/rPractice/log/analyselog.jar /logs /logOP
+
